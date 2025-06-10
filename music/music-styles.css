@@ -1,0 +1,196 @@
+/* CSS for the main page */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(to bottom, #fefcea, #f1da36);
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  background-color: #009739;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+#hamburger {
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+
+.mobile-nav {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background-color: #009739;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.mobile-nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Main Layout */
+.main-container {
+  display: flex;
+  flex: 1;
+}
+
+.sidebar {
+  width: 20%;
+  background-color: #002776;
+  color: white;
+  padding: 1.5rem;
+}
+
+.content {
+  width: 80%;
+  padding: 2rem;
+}
+
+/* Alphabet List */
+.alphabet-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+.alphabet-list a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  text-align: center;
+  background-color: #3c9b37;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.alphabet-list a:hover {
+  background-color: #2e7b2b;
+}
+
+/* Artist List */
+.artist-list-container {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+#current-letter {
+  color: #009739;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #f1da36;
+  padding-bottom: 0.5rem;
+}
+
+.accordion-item {
+  margin-bottom: 0.5rem;
+}
+
+.accordion-header {
+  background-color: #3c9b37;
+  color: white;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-header:hover {
+  background-color: #2e7b2b;
+}
+
+.accordion-content {
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 0 0 4px 4px;
+  display: none;
+}
+
+.accordion-content.active {
+  display: block;
+}
+
+/* Footer */
+footer {
+  background-color: #002776;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #ffd700;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+  }
+
+  .sidebar,
+  .content {
+    width: 100%;
+  }
+
+  .alphabet-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  #hamburger {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .alphabet-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  header {
+    padding: 1rem;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+}
