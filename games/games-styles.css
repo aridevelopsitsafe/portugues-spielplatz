@@ -1,13 +1,13 @@
-/* Games Page Specific Styles */
 .games-container {
   display: flex;
   flex: 1;
   min-height: calc(100vh - 120px);
+  background: linear-gradient(to bottom, #fefcea, #f1da36);
 }
 
 .games-sidebar {
   width: 20%;
-  background-color: #2e7b2b;
+  background-color: #009739;
   color: white;
   padding: 1.5rem;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
@@ -17,7 +17,7 @@
   font-size: 1.2rem;
   margin-bottom: 1.5rem;
   padding-bottom: 0.5rem;
-  border-bottom: 2px solid #f1da36;
+  border-bottom: 2px solid #ffdf00; /* Matching circle gradient color */
 }
 
 .games-list {
@@ -33,13 +33,13 @@
 }
 
 .games-list li:hover {
-  background-color: #3c9b37;
+  background-color: #3c9b37; /* Matching button hover color */
 }
 
 .games-content {
   width: 80%;
   padding: 2rem;
-  background-color: white;
+  background-color: linear-gradient(to bottom, #fefcea, #f1da36);
 }
 
 .game-panel {
@@ -54,32 +54,9 @@
 .game-area {
   margin-top: 1.5rem;
   padding: 1.5rem;
-  background: linear-gradient(to bottom, #fefcea, #f9f871);
+  background: white;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.hangman-display {
-  font-size: 2rem;
-  letter-spacing: 0.5rem;
-  margin-bottom: 1rem;
-}
-
-.letter-input {
-  width: 3rem;
-  height: 3rem;
-  font-size: 1.5rem;
-  text-align: center;
-  margin-right: 1rem;
-}
-
-.guess-btn {
-  padding: 0.5rem 1rem;
-  background-color: #009739;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
 }
 
 .memory-grid {
@@ -90,7 +67,7 @@
 
 .memory-card {
   height: 100px;
-  background-color: #002776;
+  background-color: #002776; /* Footer blue color */
   color: white;
   display: flex;
   align-items: center;
@@ -113,10 +90,15 @@
 
 .draggable-letter {
   padding: 0.5rem 1rem;
-  background-color: #009739;
+  background-color: #009739; /* Main green color */
   color: white;
   border-radius: 4px;
   cursor: move;
+  transition: background-color 0.2s;
+}
+
+.draggable-letter:hover {
+  background-color: #3c9b37; /* Matching button hover color */
 }
 
 .quiz-question {
@@ -132,12 +114,17 @@
 
 .quiz-option {
   padding: 0.5rem;
-  background-color: #002776;
+  background-color: #002776; /* Footer blue color */
   color: white;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   text-align: left;
+  transition: background-color 0.2s;
+}
+
+.quiz-option:hover {
+  background-color: #0044aa; /* Lighter blue for hover */
 }
 
 @keyframes fadeIn {
@@ -151,7 +138,6 @@
   }
 }
 
-/* Responsive Design */
 @media screen and (max-width: 768px) {
   .games-container {
     flex-direction: column;
@@ -168,5 +154,25 @@
 
   .memory-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .letter-input {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .games-content {
+    padding: 1rem;
+  }
+
+  .game-area {
+    padding: 1rem;
+  }
+
+  .hangman-display {
+    font-size: 1.5rem;
   }
 }

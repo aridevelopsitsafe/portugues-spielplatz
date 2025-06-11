@@ -7,41 +7,18 @@
     <link rel="stylesheet" href="games-styles.css" />
   </head>
   <body>
-    <header>
-      <div class="logo">Jogos Português</div>
-      <div id="hamburger">☰</div>
-      <nav class="mobile-nav hidden">
-        <ul>
-          <li><a href="#">Início</a></li>
-          <li><a href="#">Jogos</a></li>
-          <li><a href="#">Sobre</a></li>
-        </ul>
-      </nav>
-    </header>
+    <header></header>
 
     <div class="games-container">
       <div class="games-sidebar">
         <h2>Escolha um Jogo</h2>
         <ul class="games-list">
-          <li data-game="forca">🎯 Jogo da Forca</li>
           <li data-game="memoria">🧠 Jogo da Memória</li>
-          <li data-game="palavras">🔡 Formar Palavras</li>
-          <li data-game="quiz">❓ Quiz Rápido</li>
           <li data-game="quiz">❓ Quiz Rápido</li>
         </ul>
       </div>
 
       <div class="games-content">
-        <div id="forca" class="game-panel hidden">
-          <h2>🎯 Jogo da Forca</h2>
-          <p>Adivinhe a palavra antes que o boneco seja enforcado!</p>
-          <div class="game-area">
-            <div class="hangman-display">_ _ _ _ _</div>
-            <input type="text" maxlength="1" class="letter-input" />
-            <button class="guess-btn">Adivinhar</button>
-          </div>
-        </div>
-
         <div id="memoria" class="game-panel hidden">
           <h2>🧠 Jogo da Memória</h2>
           <p>Encontre os pares de palavras correspondentes!</p>
@@ -53,41 +30,20 @@
           </div>
         </div>
 
-        <div id="palavras" class="game-panel hidden">
-          <h2>🔡 Formar Palavras</h2>
-          <p>Arraste as letras para formar a palavra correta!</p>
-          <div class="game-area">
-            <div class="letters-container">
-              <span class="draggable-letter">A</span>
-              <span class="draggable-letter">M</span>
-              <span class="draggable-letter">O</span>
-              <span class="draggable-letter">R</span>
-            </div>
-            <div class="word-slots"></div>
-          </div>
-        </div>
-
         <div id="quiz" class="game-panel hidden">
           <h2>❓ Quiz Rápido</h2>
-          <p>Responda corretamente às perguntas de português!</p>
+          <p>Escolha a alternativa correta:</p>
           <div class="game-area">
-            <div class="quiz-question">Qual é o plural de 'cidadão'?</div>
+            <div class="quiz-question">Qual é o plural de 'casa'?</div>
             <div class="quiz-options">
-              <button class="quiz-option">Cidadãos</button>
-              <button class="quiz-option">Cidadães</button>
-              <button class="quiz-option">Cidadões</button>
+              <button class="quiz-option">casa</button>
+              <button class="quiz-option">casas</button>
+              <button class="quiz-option">casais</button>
             </div>
           </div>
         </div>
       </div>
     </div>
-
-    <footer>
-      <p>Jogos educativos para aprender Português © 2023</p>
-      <p>
-        <a href="#">Termos de Uso</a> | <a href="#">Política de Privacidade</a>
-      </p>
-    </footer>
 
     <script src="games-script.js"></script>
   </body>

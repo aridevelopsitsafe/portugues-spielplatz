@@ -1,11 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Mobile menu toggle
-    const hamburger = document.getElementById('hamburger');
-    const mobileNav = document.querySelector('.mobile-nav');
-
-    hamburger.addEventListener('click', function () {
-        mobileNav.classList.toggle('hidden');
-    });
 
     // Game selection functionality
     const gameItems = document.querySelectorAll('.games-list li');
@@ -37,19 +30,6 @@ document.addEventListener('DOMContentLoaded', function () {
         gameItems[0].click();
     }
 
-    // Hangman game logic (simplified)
-    const letterInput = document.querySelector('.letter-input');
-    const guessBtn = document.querySelector('.guess-btn');
-
-    guessBtn.addEventListener('click', function () {
-        const letter = letterInput.value.toUpperCase();
-        if (letter && letter.match(/[A-ZÀ-Ú]/)) {
-            // In a real implementation, you would check the letter against the word
-            alert(`Você adivinhou a letra ${letter}`);
-            letterInput.value = '';
-        }
-    });
-
     // Memory game logic (simplified)
     const memoryCards = document.querySelectorAll('.memory-card');
 
@@ -65,8 +45,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     quizOptions.forEach(option => {
         option.addEventListener('click', function () {
-            // In a real implementation, you would check the answer
-            alert(`Você selecionou: ${this.textContent}`);
+            if (this.textContent == 'casas') {
+                alert(`Você selecionou: ${this.textContent} :-) certa resposta`);
+            } else {
+                alert(`Você selecionou: ${this.textContent} :-( resposta errada`);
+            }
         });
     });
 });
