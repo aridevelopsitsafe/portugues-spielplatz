@@ -13,14 +13,15 @@
       <div class="games-sidebar">
         <h2>Escolha um Jogo</h2>
         <ul class="games-list">
-          <li data-game="memoria">🧠 Jogo da Memória</li>
-          <li data-game="quiz">❓ Quiz Rápido</li>
+          <li data-game="memoria">🧠 Jogo da memória</li>
+          <li data-game="quiz">❓ Quiz rápido</li>
+          <li data-game="bmi">🍔🍟 | 🥗🏃 Gordo ou magro</li>
         </ul>
       </div>
 
       <div class="games-content">
         <div id="memoria" class="game-panel hidden">
-          <h2>🧠 Jogo da Memória</h2>
+          <h2>🧠 Jogo da memória</h2>
           <p>Encontre os pares de palavras correspondentes!</p>
           <div class="game-area memory-grid">
             <div class="memory-card" data-card="1">?</div>
@@ -31,7 +32,7 @@
         </div>
 
         <div id="quiz" class="game-panel hidden">
-          <h2>❓ Quiz Rápido</h2>
+          <h2>❓ Quiz rápido</h2>
           <p>Escolha a alternativa correta:</p>
           <div class="game-area">
             <div class="quiz-question">Qual é o plural de 'casa'?</div>
@@ -40,6 +41,19 @@
               <button class="quiz-option">casas</button>
               <button class="quiz-option">casais</button>
             </div>
+          </div>
+        </div>
+
+        <div id="bmi" class="game-panel hidden">
+          <h2>🍔🍟 | 🥗🏃 Gordo ou magro</h2>
+          <p>Calcule seu IMC e descubra se você está gordo ou magro:</p>
+          <div class="game-area">
+            <h3>qual é a sua altura?</h3>
+            <div class="heigth"></div>
+            <h3>qual é o seu peso?</h3>
+            <div class="weigth"></div>
+            <h3>você está</h3>
+            <div class="result"></div>
           </div>
         </div>
       </div>

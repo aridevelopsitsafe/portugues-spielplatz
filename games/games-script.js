@@ -30,17 +30,17 @@ document.addEventListener('DOMContentLoaded', function () {
         gameItems[0].click();
     }
 
-    // Memory game logic (simplified)
+    // Memory game logic
     const memoryCards = document.querySelectorAll('.memory-card');
 
     memoryCards.forEach(card => {
         card.addEventListener('click', function () {
-            // In a real implementation, you would reveal the card
-            this.textContent = "📖"; // Example content
+
+            this.textContent = "📖";
         });
     });
 
-    // Quiz game logic (simplified)
+    // Quiz game logic
     const quizOptions = document.querySelectorAll('.quiz-option');
 
     quizOptions.forEach(option => {
