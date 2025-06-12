@@ -45,15 +45,32 @@
         </div>
 
         <div id="bmi" class="game-panel hidden">
-          <h2>🍔🍟 | 🥗🏃 Gordo ou magro</h2>
+          <h2>🍔🍟 | 🥗🏃 Gordo ou Magro</h2>
           <p>Calcule seu IMC e descubra se você está gordo ou magro:</p>
           <div class="game-area">
-            <h3>qual é a sua altura?</h3>
-            <div class="heigth"></div>
-            <h3>qual é o seu peso?</h3>
-            <div class="weigth"></div>
-            <h3>você está</h3>
-            <div class="result"></div>
+            <h3>Qual é a sua altura? (cm)</h3>
+            <input
+              type="number"
+              id="height"
+              placeholder="170"
+              min="100"
+              max="250"
+            />
+
+            <h3>Qual é o seu peso? (kg)</h3>
+            <input
+              type="number"
+              id="weight"
+              placeholder="70"
+              min="30"
+              max="300"
+            />
+
+            <button id="calculate">Calcular IMC</button>
+
+            <h3>Você está:</h3>
+            <div id="result" class="result">?</div>
+            <div id="emoji-result"></div>
           </div>
         </div>
       </div>

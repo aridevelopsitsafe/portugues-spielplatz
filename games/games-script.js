@@ -52,4 +52,34 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     });
+
+    document.getElementById('calculate').addEventListener('click', function () {
+        const height = parseInt(document.getElementById('height').value) / 100; // Convert cm to m
+        const weight = parseInt(document.getElementById('weight').value);
+
+        if (!height || !weight) {
+            alert("Por favor, preencha altura e peso!");
+            return;
+        }
+
+        const bmi = (weight / (height * height)).toFixed(1);
+        let resultText, emoji;
+
+        if (bmi < 18.5) {
+            resultText = `MAGRO (IMC: ${bmi})`;
+            emoji = "🥗🏃";
+        } else if (bmi >= 18.5 && bmi < 25) {
+            resultText = `NORMAL (IMC: ${bmi})`;
+            emoji = "👍😊";
+        } else if (bmi >= 25 && bmi < 30) {
+            resultText = `GORDINHO (IMC: ${bmi})`;
+            emoji = "🍔🤏";
+        } else {
+            resultText = `GORDO (IMC: ${bmi})`;
+            emoji = "🍔🍟";
+        }
+
+        document.getElementById('result').textContent = resultText;
+        document.getElementById('emoji-result').textContent = emoji;
+    });
 });
