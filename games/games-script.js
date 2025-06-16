@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function () {
             resultText = `MAGRO (IMC: ${bmi})`;
             emoji = "🥗🏃";
         } else if (bmi >= 18.5 && bmi < 25) {
-            resultText = `NORMAL (IMC: ${bmi})`;
+            resultText = `BEM (IMC: ${bmi})`;
             emoji = "👍😊";
         } else if (bmi >= 25 && bmi < 30) {
             resultText = `GORDINHO (IMC: ${bmi})`;
