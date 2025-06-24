@@ -53,6 +53,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+    // BMI logic
     document.getElementById('calculate').addEventListener('click', function () {
         const height = parseInt(document.getElementById('height').value) / 100; // Convert cm to m
         const weight = parseInt(document.getElementById('weight').value);
@@ -82,4 +83,62 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('result').textContent = resultText;
         document.getElementById('emoji-result').textContent = emoji;
     });
+
+    //days of the week logic
+    const germanDays = document.querySelectorAll('#german-list li');
+    const portugueseList = document.getElementById('portuguese-list');
+    const portugueseResult = document.getElementById('portuguese-result');
+
+    germanDays.forEach(day => {
+        day.addEventListener('click', function () {
+            // Clear previous highlights
+            document.querySelectorAll('.highlight').forEach(el => {
+                el.classList.remove('highlight');
+            });
+
+            // Highlight clicked German day
+            this.classList.add('highlight');
+
+            const germanDay = this.getAttribute('data-day');
+            let portugueseDay;
+
+            // Correct switch case with proper matching
+            switch (germanDay) {
+                case 'sonntag':
+                    portugueseDay = 'Domingo';
+                    break;
+                case 'montag':
+                    portugueseDay = 'Segunda-feira';
+                    break;
+                case 'dienstag':
+                    portugueseDay = 'Terça-feira';
+                    break;
+                case 'mittwoch':
+                    portugueseDay = 'Quarta-feira';
+                    break;
+                case 'donnerstag':
+                    portugueseDay = 'Quinta-feira';
+                    break;
+                case 'freitag':
+                    portugueseDay = 'Sexta-feira';
+                    break;
+                case 'samstag':
+                    portugueseDay = 'Sábado';
+                    break;
+                default:
+                    portugueseDay = 'Unknown day';
+            }
+
+            // Show the Portuguese list
+            portugueseList.style.display = 'block';
+
+            // Display the full Portuguese name
+            portugueseResult.innerHTML = `
+        <p>German: <strong>${this.textContent}</strong></p>
+        <p>Portuguese: <strong>${portugueseDay}</strong></p>
+      `;
+        });
+    });
+
+
 });

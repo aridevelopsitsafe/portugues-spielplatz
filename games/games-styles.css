@@ -127,6 +127,51 @@
   background-color: #0044aa; /* Lighter blue for hover */
 }
 
+.weekdays-container {
+  display: flex;
+  gap: 2rem;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-top: 1.5rem;
+}
+
+.weekdays-container h3 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #ffdf00;
+  color: #002776;
+}
+.weekdays-list {
+  list-style: none;
+  padding: 0;
+}
+.weekdays-list li {
+  padding: 8px;
+  margin: 4px;
+  background: #f0f0f0;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.weekdays-list li:hover {
+  background: #e0e0e0;
+}
+#portuguese-list {
+  display: none; /* Hidden by default */
+  margin-top: 20px;
+}
+.result {
+  margin-top: 10px;
+  padding: 10px;
+  background: #f8f8f8;
+  border-radius: 4px;
+}
+.highlight {
+  background-color: #ffeb3b !important;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
