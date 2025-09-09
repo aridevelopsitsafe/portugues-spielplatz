@@ -30,8 +30,9 @@ buttons.forEach((btn) => {
             `<h2>${btn.innerHTML}</h2>
             <p>${btn.dataset.content}</p>`
 
-        // Show menu
         mobileNav.classList.remove("hidden");
+
+
     });
 });
 

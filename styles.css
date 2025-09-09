@@ -22,9 +22,7 @@ header {
   align-items: center;
   padding: 1rem 2rem;
 }
-.logo {
-  font-size: 2rem;
-}
+
 #hamburger {
   font-size: 1.5rem;
   cursor: pointer;
@@ -37,6 +35,34 @@ header {
   width: 100%;
   background-color: #009739;
   padding: 1rem;
+}
+
+.nav-container {
+  display: flex;
+  flex-wrap: wrap; /* quebra linha se não couber */
+  gap: 15px; /* espaçamento entre os blocos */
+  justify-content: center; /* centraliza no eixo horizontal */
+  padding: 20px;
+}
+
+.nav-item {
+  display: flex; /* usar flex dentro do item */
+  flex-direction: column; /* ícone em cima, texto embaixo */
+  align-items: center; /* centraliza horizontalmente */
+  justify-content: center; /* centraliza verticalmente */
+  width: 2rem; /* largura fixa (pode ajustar) */
+  height: 2rem; /* altura fixa */
+  background: #f0f0f0;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1rem; /* aumenta tamanho dos ícones */
+  color: black;
+  text-align: center; /* centraliza o texto */
+  transition: background 0.3s;
+}
+
+.nav-item:hover {
+  background: #ddd;
 }
 
 .hidden {
@@ -124,13 +150,17 @@ main {
   overflow: hidden;
   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
 /* Footer */
 footer {
   background-color: #002776;
   color: white;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 1rem;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 footer a {
   color: #ffd700;
@@ -149,29 +179,29 @@ footer a:hover {
   }
 
   .circle {
-    width: 280px;
-    height: 280px;
+    width: 20rem;
+    height: 22rem;
   }
 
   .circle-btn {
-    width: 60px;
-    height: 60px;
-    font-size: 0.75rem;
+    width: 4.5rem;
+    height: 4.5rem;
+    font-size: 0.7rem;
   }
 
   .content-box {
-    width: 150px;
-    height: 80px;
+    width: 12rem;
+    height: 10rem;
     font-size: 0.85rem;
     padding: 1rem;
   }
 
   main {
+    margin-top: 2rem;
     padding: 1rem;
   }
 
   footer {
-    font-size: 0.75rem;
-    padding: 0.5rem;
+    padding: 1rem;
   }
 }
